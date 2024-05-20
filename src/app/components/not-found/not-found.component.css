@@ -9,15 +9,10 @@
     font-family: 'Arial', sans-serif;
 } */
 
-.container {
+/* .container {
     text-align: center;
 }
 
-h1 {
-    font-size: 6rem;
-    color: #ff6b6b;
-    margin: 0;
-}
 
 p {
     font-size: 1.5rem;
@@ -38,4 +33,11 @@ p {
 
 .home-link:hover {
     background-color: #ff4a4a;
+} */
+
+
+h1 {
+    font-size: 6rem;
+    color: #ff6b6b;
+    margin: 0;
 }

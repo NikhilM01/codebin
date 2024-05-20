@@ -1,4 +1,4 @@
-<form class="container" #registerForm="ngForm">
+<!-- <form class="container" #registerForm="ngForm">
     <h4>Please Signup</h4>
     <input
      type="email"
@@ -22,4 +22,37 @@
     <h5 class="red-text" [hidden]="password.valid || password.untouched">password is required and must be greater then 6</h5>
     <button class="btn-green" [disabled]="registerForm.invalid" (click)="register(registerForm)">Signup</button>
     <button class="btn-red" (click)="reset(registerForm)">Reset</button>
- </form>
+ </form> -->
+
+
+<form class="container mt-5 bg-dark text-white p-4 rounded" #registerForm="ngForm">
+    <h4 class="text-center mb-4">Please Signup</h4>
+    <div class="form-group">
+        <input
+            type="email"
+            class="form-control"
+            placeholder="Email here"
+            required
+            pattern="^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$"
+            ngModel
+            name="email"
+            #email="ngModel"
+        />
+        <small class="form-text text-danger" [hidden]="email.valid || email.untouched">Enter correct email</small>
+    </div>
+    <div class="form-group">
+        <input
+            type="password"
+            class="form-control"
+            placeholder="Password here"
+            required
+            minlength="6"
+            ngModel
+            name="password"
+            #password="ngModel"
+        />
+        <small class="form-text text-danger" [hidden]="password.valid || password.untouched">Password is required and must be greater than 6</small>
+    </div>
+    <button class="btn btn-success btn-block" [disabled]="registerForm.invalid" (click)="register(registerForm)">Signup</button>
+    <button class="btn btn-danger btn-block ms-3" (click)="reset(registerForm)">Reset</button>
+</form>

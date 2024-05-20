@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
     <ul>
         @if(items.length == 0){
         <li>No data</li>
@@ -7,4 +7,20 @@
         <li><a [routerLink]="['/snippet', item.id]">{{ item.title }}</a></li>
         }
     </ul>
+</div> -->
+
+
+<div class="container mt-3">
+    <h3>All Codebins</h3>
+    <ul class="list-group">
+        @if(items.length == 0){
+            <li class="list-group-item list-group-item-primary">No data</li>
+        }
+        @for (item of items; track item.id) {
+            <li class="list-group-item list-group-item-primary" [routerLink]="['/snippet', item.id]">
+                <a  class="text-white">{{ item.title }}</a>
+            </li>
+        }
+    </ul>
 </div>
+

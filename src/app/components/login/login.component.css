@@ -38,15 +38,17 @@
   
   .btn-green {
     background-color: #4CAF50;
+
   }
   
   .btn-red {
     background-color: #f44336;
-    margin-left: 20px;
+    /* margin-left: 20px; */
   }
   
   .btn-green:disabled, .btn-red:disabled {
     background-color: #ddd;
     cursor: not-allowed;
+    
   }
   

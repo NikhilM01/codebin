@@ -1,4 +1,4 @@
-/* Apply styles to the navigation bar */
+/* Apply styles to the navigation bar
 div {
     margin: 10px;
 }
@@ -32,5 +32,15 @@ a{
     color: black;
 }
 ul li a.active {
+    font-weight: 700;
+} */
+
+/* Custom styles */
+.logout {
+    color: red;
+    font-weight: 700;
+}
+
+.nav-link.active {
     font-weight: 700;
 }
